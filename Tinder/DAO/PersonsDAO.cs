@@ -93,5 +93,10 @@ namespace Tinder.DAO
         {
             throw new NotImplementedException();
         }
+
+        public void UpdatePersonRecord(Person person)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

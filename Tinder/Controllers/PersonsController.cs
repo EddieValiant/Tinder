@@ -11,8 +11,12 @@ namespace Tinder.Controllers
 {
     public class PersonsController : ApiController
     {      
-        private IPersonsDAO personsDAO = PersonsDAO.Instance;
+        private IPersonsDAO personsDAO;
 
+        public PersonsController(IPersonsDAO personsDAO)
+        {
+            this.personsDAO = personsDAO;
+        }
 
         // GET api/persons/{username}
         public IQueryable<Person> Get()
