@@ -19,7 +19,7 @@ namespace TinderTests
         public void SetUp()
         {
             this.mockedPersonsDAO = A.Fake<IPersonsDAO>();
-            this.personsController = new PersonsController();
+            this.personsController = new PersonsController(mockedPersonsDAO);
             this.mockedPerson = A.Fake<Person>();
         }
 
